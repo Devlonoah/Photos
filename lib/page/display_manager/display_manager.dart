@@ -1,6 +1,3 @@
-import 'package:figma_prototype/page/chat/chat.dart';
-import 'package:figma_prototype/page/profile/profile.dart';
-import 'package:figma_prototype/page/search/search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,7 +5,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'package:figma_prototype/constants.dart';
 import 'package:figma_prototype/cubit/tab_cubit.dart';
+import 'package:figma_prototype/page/chat/chat.dart';
 import 'package:figma_prototype/page/home/home.dart';
+import 'package:figma_prototype/page/profile/profile.dart';
+import 'package:figma_prototype/page/search/search.dart';
 
 class DisplayManager extends StatelessWidget {
   static String id = 'DisplayManager';
@@ -47,24 +47,39 @@ class BottomNavs extends StatelessWidget {
         width: 375.w,
         decoration: BoxDecoration(
             border: Border(top: BorderSide(color: Colors.grey.shade300))),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            BottomBarIcon(
-              icon: Icons.home_outlined,
-              onTap: () => BlocProvider.of<TabCubit>(context).tabChanged(0),
-            ),
-            BottomBarIcon(
-                icon: Icons.search,
-                onTap: () => BlocProvider.of<TabCubit>(context).tabChanged(1)),
-            MiddleRedButton(),
-            BottomBarIcon(
-                icon: Icons.chat_bubble_outline,
-                onTap: () => BlocProvider.of<TabCubit>(context).tabChanged(3)),
-            BottomBarIcon(
-                icon: Icons.person_outline,
-                onTap: () => BlocProvider.of<TabCubit>(context).tabChanged(4)),
-          ],
+        child: BlocBuilder<TabCubit, TabState>(
+          builder: (context, state) {
+            return Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                BottomBarIcon(
+                  specifiedIndex: 0,
+                  currentIndex: state.index,
+                  icon: Icons.home_outlined,
+                  onTap: () => BlocProvider.of<TabCubit>(context).tabChanged(0),
+                ),
+                BottomBarIcon(
+                    specifiedIndex: 1,
+                    currentIndex: state.index,
+                    icon: Icons.search,
+                    onTap: () =>
+                        BlocProvider.of<TabCubit>(context).tabChanged(1)),
+                MiddleRedButton(),
+                BottomBarIcon(
+                    specifiedIndex: 3,
+                    currentIndex: state.index,
+                    icon: Icons.chat_bubble_outline,
+                    onTap: () =>
+                        BlocProvider.of<TabCubit>(context).tabChanged(3)),
+                BottomBarIcon(
+                    specifiedIndex: 4,
+                    currentIndex: state.index,
+                    icon: Icons.person_outline,
+                    onTap: () =>
+                        BlocProvider.of<TabCubit>(context).tabChanged(4)),
+              ],
+            );
+          },
         ),
       ),
     );
@@ -111,11 +126,15 @@ class BottomBarIcon extends StatelessWidget {
   const BottomBarIcon({
     Key? key,
     this.icon,
+    this.currentIndex,
+    required this.specifiedIndex,
     this.onTap,
   }) : super(key: key);
 
   final IconData? icon;
+  final int? currentIndex;
 
+  final int specifiedIndex;
   final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
@@ -124,7 +143,15 @@ class BottomBarIcon extends StatelessWidget {
       child: Container(
           height: 40.h,
           width: 40.w,
-          child: SizedBox(width: 15.56.h, height: 14.06.h, child: Icon(icon))),
+          child: SizedBox(
+              width: 15.56.h,
+              height: 14.06.h,
+              child: Icon(
+                icon,
+                color: currentIndex == specifiedIndex
+                    ? COLOR_BLACK
+                    : COLOR_HINTCOLOR,
+              ))),
     );
   }
 }

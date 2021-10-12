@@ -107,6 +107,7 @@ class NewStorySlide extends StatelessWidget {
     return SizedBox(
       height: 387.h,
       child: ListView.builder(
+          shrinkWrap: false,
           scrollDirection: Axis.horizontal,
           physics: BouncingScrollPhysics(),
           itemCount: storyList.first.user.length,
@@ -156,12 +157,14 @@ class StoryImageAndUserAvatarCard extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Container(
-            height: 343.h,
-            width: 343.w,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage(imageUrl), fit: BoxFit.cover),
+          Expanded(
+            child: Container(
+              // height: 300.h,
+              width: 343.w,
+              child: Image.asset(
+                imageUrl,
+                fit: BoxFit.cover,
+              ),
             ),
           ),
           addVerticalSpace(16),
