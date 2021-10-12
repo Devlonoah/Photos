@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:figma_prototype/page/storyview/story_view.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -64,16 +66,27 @@ class Home extends StatelessWidget {
               shrinkWrap: true,
               physics: NeverScrollableScrollPhysics(),
               crossAxisCount: 2,
-              itemCount: 10,
-              itemBuilder: (BuildContext context, int index) => new Container(
-                child: Image.asset(
-                  'assets/browse/${index + 1}.png',
-                  // imageList[index],
-                  fit: BoxFit.cover,
-                ),
-              ),
+              itemCount: browseList.length,
+              itemBuilder: (BuildContext context, int index) {
+                final _image = browseList[index];
+                return GestureDetector(
+                  onTap: () {
+                    print('hello');
+                    final random = Random();
+                    Navigator.pushNamed(context, StoryView.id,
+                        arguments: ScreenArgument(
+                            userList[random.nextInt(userList.length)], _image));
+                  },
+                  child: Container(
+                    child: Image.asset(
+                      _image,
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                );
+              },
               staggeredTileBuilder: (int index) =>
-                  new StaggeredTile.count(1, index.isEven ? 1.5 : 1.8),
+                  StaggeredTile.count(1, index.isEven ? 1.5 : 1.8),
               mainAxisSpacing: 9.0.h,
               crossAxisSpacing: 9.0.w,
             ),

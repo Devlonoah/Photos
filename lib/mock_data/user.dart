@@ -48,3 +48,16 @@ class ScreenArgument {
 
   ScreenArgument(this.user, this.imagePath);
 }
+
+final browseList = [
+  'assets/browse/1.png',
+  'assets/browse/2.png',
+  'assets/browse/3.png',
+  'assets/browse/4.png',
+  'assets/browse/5.png',
+  'assets/browse/6.png',
+  'assets/browse/7.png',
+  'assets/browse/8.png',
+  'assets/browse/9.png',
+  'assets/browse/10.png',
+];
