@@ -89,7 +89,8 @@ class Home extends StatelessWidget {
               hasCustomSize: true,
               buttonSize: Size(343.w, 52.h),
             ),
-          )
+          ),
+          addVerticalSpace(32),
         ],
       ),
     );
