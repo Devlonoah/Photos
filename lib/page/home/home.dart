@@ -33,7 +33,7 @@ class Home extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 16.w),
               child: Text(
                 'WHAT\'S NEW TODAY',
-                style: TextStyle(fontWeight: FontWeight.w900, fontSize: 13.sp),
+                style: subHeaderTextStyle,
               ),
             ),
             addVerticalSpace(24),
@@ -43,7 +43,7 @@ class Home extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 16.w),
               child: Text(
                 'BROWSE ALL',
-                style: TextStyle(fontSize: 13.sp, fontWeight: FontWeight.w900),
+                style: subHeaderTextStyle,
               ),
             ),
             addVerticalSpace(24),
@@ -60,7 +60,6 @@ class Home extends StatelessWidget {
                 final _image = browseList[index];
                 return GestureDetector(
                   onTap: () {
-                    print('hello');
                     final random = Random();
                     Navigator.pushNamed(context, StoryView.id,
                         arguments: ScreenArgument(

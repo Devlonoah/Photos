@@ -1,3 +1,5 @@
+import 'package:figma_prototype/page/profile/profile.dart';
+import 'package:figma_prototype/page/search/search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -24,10 +26,10 @@ class DisplayManager extends StatelessWidget {
 
 final screenList = [
   Home(),
+  SearchPage(),
   Scaffold(),
   Scaffold(),
-  Scaffold(),
-  Scaffold(),
+  ProfilePage()
 ];
 
 class BottomNavs extends StatelessWidget {

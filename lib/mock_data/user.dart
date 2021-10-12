@@ -61,3 +61,30 @@ final browseList = [
   'assets/browse/9.png',
   'assets/browse/10.png',
 ];
+
+final searchresult = [
+  'assets/search/s1.png',
+  'assets/search/s2.png',
+  'assets/search/s3.png',
+  'assets/search/s4.png',
+  'assets/search/s5.png',
+  'assets/search/s6.png',
+  'assets/search/s7.png',
+  'assets/search/s8.png',
+  'assets/search/s9.png',
+  'assets/search/s10.png',
+  'assets/search/s11.png',
+  'assets/search/s12.png',
+  'assets/search/s13.png',
+  'assets/search/s14.png',
+  'assets/search/s15.png',
+];
+
+final profilePhotos = [
+  'assets/profile/1.png',
+  'assets/profile/2.png',
+  'assets/profile/3.png',
+  'assets/profile/4.png',
+  'assets/profile/5.png',
+  'assets/profile/6.png',
+];
