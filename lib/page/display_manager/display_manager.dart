@@ -1,3 +1,4 @@
+import 'package:figma_prototype/page/chat/chat.dart';
 import 'package:figma_prototype/page/profile/profile.dart';
 import 'package:figma_prototype/page/search/search.dart';
 import 'package:flutter/cupertino.dart';
@@ -28,7 +29,7 @@ final screenList = [
   Home(),
   SearchPage(),
   Scaffold(),
-  Scaffold(),
+  ChatPage(),
   ProfilePage()
 ];
 
@@ -56,32 +57,7 @@ class BottomNavs extends StatelessWidget {
             BottomBarIcon(
                 icon: Icons.search,
                 onTap: () => BlocProvider.of<TabCubit>(context).tabChanged(1)),
-            GestureDetector(
-              onTap: () => BlocProvider.of<TabCubit>(context).tabChanged(2),
-              child: Container(
-                height: 40.h,
-                width: 70.w,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: COLOR_BLACK,
-                  borderRadius: BorderRadius.circular(20.r),
-                  gradient: LinearGradient(
-                    begin: Alignment.bottomCenter,
-                    end: Alignment.topCenter,
-                    stops: [0.08, 0.9142],
-                    colors: [
-                      Color(0xFFFF4D00),
-                      Color(0xFFFF00D6),
-                    ],
-                  ),
-                ),
-                child: Icon(
-                  Icons.add,
-                  size: 25.r,
-                  color: COLOR_WHITE,
-                ),
-              ),
-            ),
+            MiddleRedButton(),
             BottomBarIcon(
                 icon: Icons.chat_bubble_outline,
                 onTap: () => BlocProvider.of<TabCubit>(context).tabChanged(3)),
@@ -89,6 +65,42 @@ class BottomNavs extends StatelessWidget {
                 icon: Icons.person_outline,
                 onTap: () => BlocProvider.of<TabCubit>(context).tabChanged(4)),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+class MiddleRedButton extends StatelessWidget {
+  const MiddleRedButton({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        height: 40.h,
+        width: 70.w,
+        alignment: Alignment.center,
+        decoration: BoxDecoration(
+          color: COLOR_BLACK,
+          borderRadius: BorderRadius.circular(20.r),
+          gradient: LinearGradient(
+            begin: Alignment.bottomCenter,
+            end: Alignment.topCenter,
+            stops: [0.08, 0.9142],
+            colors: [
+              Color(0xFFFF4D00),
+              Color(0xFFFF00D6),
+            ],
+          ),
+        ),
+        child: Icon(
+          Icons.add,
+          size: 25.r,
+          color: COLOR_WHITE,
         ),
       ),
     );

@@ -18,6 +18,15 @@ class Story {
   });
 }
 
+class Chat {
+  final String message;
+  final User user;
+  Chat({
+    required this.message,
+    required this.user,
+  });
+}
+
 final defaultUser = User('Pawel Czervinski', 'assets/entry_avatar.png',
     '@Pawel Czervinski', 'TORONTO, CA');
 final userList = [
@@ -27,6 +36,12 @@ final userList = [
       'ATLANTA,GE'),
   User('Jon Tyson', 'assets/avatar/avatar-2.png', '@jontyson', 'FLORIDA, US'),
   User('Simon Zhu', 'assets/avatar/avatar-3.png', '@smnzhu', 'KOREA, SE')
+];
+
+final chatOnlyUser = [
+  User("James", 'assets/avatar/james_avatar.png', '', ''),
+  User('Beth Williams', profilePhotos[4], '', ''),
+  User("Rev Shawn", profilePhotos[5], '', '')
 ];
 
 final random = Random();
@@ -87,4 +102,16 @@ final profilePhotos = [
   'assets/profile/4.png',
   'assets/profile/5.png',
   'assets/profile/6.png',
+];
+
+final List<Chat> chats = [
+  Chat(message: 'Thank you! That was very helpful!', user: chatOnlyUser[0]),
+  Chat(
+      message:
+          "I’m looking for tips around capturing the milky way. I have a 6D with a 24-100mm...",
+      user: chatOnlyUser[1]),
+  Chat(
+      message:
+          "Wanted to ask if you’re available for a portrait shoot next week.",
+      user: chatOnlyUser[2])
 ];
