@@ -42,11 +42,11 @@ class ChatPageBody extends StatelessWidget {
   CupertinoSliverNavigationBar _navBar() {
     return CupertinoSliverNavigationBar(
       automaticallyImplyLeading: false,
-      largeTitle: Center(
-          child: Text(
+      middle: Text(
         'Chat',
         style: TextStyle(fontSize: 17.sp),
-      )),
+      ),
+      largeTitle: Text(''),
     );
   }
 }
