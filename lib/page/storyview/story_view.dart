@@ -1,6 +1,6 @@
-import 'package:figma_prototype/constants.dart';
-import 'package:figma_prototype/mock_data/user.dart';
-import 'package:figma_prototype/widget/small_avatar_with_username+and_name.dart';
+import '../../constants.dart';
+import '../../mock_data/user.dart';
+import '../../widget/small_avatar_with_username+and_name.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

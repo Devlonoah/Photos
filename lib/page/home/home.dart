@@ -1,12 +1,12 @@
 import 'dart:math';
 
-import 'package:figma_prototype/constants.dart';
-import 'package:figma_prototype/function/functions.dart';
-import 'package:figma_prototype/mock_data/user.dart';
-import 'package:figma_prototype/page/display_manager/display_manager.dart';
-import 'package:figma_prototype/page/storyview/story_view.dart';
-import 'package:figma_prototype/widget/small_avatar_with_username+and_name.dart';
-import 'package:figma_prototype/widget/widgets.dart';
+import '../../constants.dart';
+import '../../function/functions.dart';
+import '../../mock_data/user.dart';
+import '../display_manager/display_manager.dart';
+import '../storyview/story_view.dart';
+import '../../widget/small_avatar_with_username+and_name.dart';
+import '../../widget/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 

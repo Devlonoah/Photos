@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:figma_prototype/function/functions.dart';
-import 'package:figma_prototype/mock_data/user.dart';
+import '../function/functions.dart';
+import '../mock_data/user.dart';
 
 class SmallAvatarWithUsernameAndName extends StatelessWidget {
   const SmallAvatarWithUsernameAndName({

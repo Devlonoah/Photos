@@ -1,13 +1,13 @@
-import 'package:figma_prototype/mock_data/user.dart';
-import 'package:figma_prototype/page/login/login.dart';
-import 'package:figma_prototype/page/register/register.dart';
-import 'package:figma_prototype/widget/small_avatar_with_username+and_name.dart';
-import 'package:figma_prototype/widget/widgets.dart';
+import '../../mock_data/user.dart';
+import '../login/login.dart';
+import '../register/register.dart';
+import '../../widget/small_avatar_with_username+and_name.dart';
+import '../../widget/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:figma_prototype/constants.dart';
-import 'package:figma_prototype/function/functions.dart';
+import '../../constants.dart';
+import '../../function/functions.dart';
 
 class WelcomePage extends StatelessWidget {
   static String id = 'WelcomePage';

@@ -3,12 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:figma_prototype/constants.dart';
-import 'package:figma_prototype/cubit/tab_cubit.dart';
-import 'package:figma_prototype/page/chat/chat.dart';
-import 'package:figma_prototype/page/home/home.dart';
-import 'package:figma_prototype/page/profile/profile.dart';
-import 'package:figma_prototype/page/search/search.dart';
+import '../../constants.dart';
+import '../../cubit/tab_cubit.dart';
+import '../chat/chat.dart';
+import '../home/home.dart';
+import '../profile/profile.dart';
+import '../search/search.dart';
 
 class DisplayManager extends StatelessWidget {
   static String id = 'DisplayManager';

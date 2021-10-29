@@ -1,6 +1,6 @@
-import 'package:figma_prototype/cubit/tab_cubit.dart';
-import 'package:figma_prototype/page/welcome/welcome.dart';
-import 'package:figma_prototype/routes.dart';
+import 'cubit/tab_cubit.dart';
+import 'page/welcome/welcome.dart';
+import 'routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

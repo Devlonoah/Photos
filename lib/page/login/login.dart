@@ -1,11 +1,11 @@
-import 'package:figma_prototype/constants.dart';
-import 'package:figma_prototype/page/display_manager/display_manager.dart';
-import 'package:figma_prototype/widget/text_input.dart';
-import 'package:figma_prototype/widget/widgets.dart';
+import '../../constants.dart';
+import '../display_manager/display_manager.dart';
+import '../../widget/text_input.dart';
+import '../../widget/widgets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-import 'package:figma_prototype/function/functions.dart';
+import '../../function/functions.dart';
 
 class LoginPage extends StatelessWidget {
   static String id = 'LoginPage';
