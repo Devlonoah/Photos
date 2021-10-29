@@ -1,10 +1,11 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import '../../constants.dart';
 import '../../function/functions.dart';
 import '../../mock_data/user.dart';
 import '../../widget/text_input.dart';
 import '../../widget/widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);
@@ -28,7 +29,7 @@ class SearchBody extends StatelessWidget {
               addVerticalSpace(76),
               Text(
                 'Search',
-                style: TextStyle(fontWeight: FontWeight.w400, fontSize: 36.sp),
+                style: kkHeaderTextStyle,
               ),
               addVerticalSpace(32),
               TextInput(hintText: 'Search'),

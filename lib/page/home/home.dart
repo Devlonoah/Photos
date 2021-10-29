@@ -3,7 +3,6 @@ import 'dart:math';
 import '../../constants.dart';
 import '../../function/functions.dart';
 import '../../mock_data/user.dart';
-import '../display_manager/display_manager.dart';
 import '../storyview/story_view.dart';
 import '../../widget/small_avatar_with_username+and_name.dart';
 import '../../widget/widgets.dart';
@@ -25,7 +24,7 @@ class Home extends StatelessWidget {
               padding: EdgeInsets.symmetric(horizontal: 16.w),
               child: Text(
                 'Discover',
-                style: TextStyle(fontSize: 36.sp, fontWeight: FontWeight.w400),
+                style: kkHeaderTextStyle,
               ),
             ),
             addVerticalSpace(32),

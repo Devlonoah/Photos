@@ -1,3 +1,5 @@
+import '../display_manager/display_manager.dart';
+
 import '../../constants.dart';
 import '../../widget/text_input.dart';
 import '../../widget/widgets.dart';
@@ -51,11 +53,14 @@ class RegisterPageBody extends StatelessWidget {
               labelColor: COLOR_WHITE,
               hasCustomSize: true,
               buttonSize: Size(343.w, 52.h),
-              onPress: () {},
+              onPress: () => _navigate(context),
             )
           ],
         ),
       ),
     ));
   }
+
+  _navigate(BuildContext context) =>
+      Navigator.pushNamed(context, DisplayManager.id);
 }

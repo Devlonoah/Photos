@@ -1,10 +1,11 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
+
 import '../../constants.dart';
 import '../../function/functions.dart';
 import '../../mock_data/user.dart';
 import '../../widget/widgets.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 
 class ProfilePage extends StatelessWidget {
   static String id = 'ProfilePage';
@@ -38,7 +39,7 @@ class ProfilePageBody extends StatelessWidget {
             addVerticalSpace(16),
             Button(
               bgColor: COLOR_WHITE,
-              label: 'FOLLOW JANE',
+              label: 'MESSAGE',
               labelColor: COLOR_BLACK,
               hasCustomSize: false,
             ),
@@ -93,7 +94,7 @@ class ProfilePageBody extends StatelessWidget {
     return Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
       Text(
         'Jane',
-        style: TextStyle(fontSize: 36.sp, fontWeight: FontWeight.w400),
+        style: kkHeaderTextStyle,
       ),
       addVerticalSpace(16),
       Text('SAN FRANCISCO, CA', style: subHeaderTextStyle),

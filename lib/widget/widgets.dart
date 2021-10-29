@@ -25,7 +25,7 @@ class Button extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextButton(
-      onPressed: onPress,
+      onPressed: onPress ?? () {},
       child: Text(
         label,
         style: TextStyle(
